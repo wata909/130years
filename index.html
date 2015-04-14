@@ -27,7 +27,7 @@ var ort = L.tileLayer(
     attribution: "GSI Ortho", maxNativeZoom: 15, maxZoom: 17
 }); 
 var rapid1880 = L.tileLayer(
-  'http://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png', {
+  'http://www.finds.jp/ws/tmc/1.0.0/Kanto_Rapid-900913-L/{z}/{x}/{y}.png', {
     attribution: "HABS Rapid 1880s", maxNativeZoom: 15, maxZoom: 17
 });
 var map = L.map('mapdiv', {
@@ -42,7 +42,7 @@ function clip() {
       se = map.containerPointToLayerPoint(map.getSize()),
       clipX = nw.x + (se.x - nw.x) * range.value;
 
-  ort1940.getContainer().style.clip =
+  rapid1880.getContainer().style.clip =
     'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
 }
 
