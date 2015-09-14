@@ -319,7 +319,7 @@ function init() {
     }(mapnum));
 
     // マーカ生成・追加
-    markers[mapnum] = appendCenterMarker(maps[mapnum], "cmark.png");
+    markers[mapnum] = appendCenterMarker(maps[mapnum], "http://habs.dc.affrc.go.jp/cmark.png");
     // マウスカーソルが外に出たらマーカ全消し
     maps[mapnum].events.register("mouseout", maps[mapnum], clearMarkers);
     // 地図内でマウスカーソルが移動すると
@@ -396,7 +396,7 @@ function appendCenterMarker(map, markerurl) {
   // cmarkの中心が cmarkwrapの左上隅 に重なるようにする
   // cmarkのサイズが異なると、left, top の値は変わる
   var cmark = document.createElement("img");
-  cmark.src = "cmark.png";
+  cmark.src = "http://habs.dc.affrc.go.jp/cmark.png";
   cmark.style.position = "absolute";
   cmark.style.left = "-15px";
   cmark.style.top = "-15px";
